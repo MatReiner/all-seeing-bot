@@ -75,7 +75,7 @@ func init() {
 		c.Regex = exp
 	}
 
-	ignoreRegex, err = regexp.Compile(strings.Join(ignored, "|"))
+	ignoreRegex, err = regexp.Compile("\W")
 	if err != nil {
 		panic(err)
 	}
