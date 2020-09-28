@@ -75,7 +75,7 @@ func init() {
 		c.Regex = exp
 	}
 
-	ignoreRegex, err = regexp.Compile(strings.Join(ignored, "|"))
+	ignoreRegex, err = regexp.Compile("[^a-zA-Z0-9_ ]")
 	if err != nil {
 		panic(err)
 	}
